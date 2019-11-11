@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: kubed
-        image: kubed:latest
+        image: imsrv01/kubed:latest
         ports:
         - containerPort: 5001
