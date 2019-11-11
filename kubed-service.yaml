@@ -11,5 +11,5 @@ spec:
     protocol: TCP
     targetPort: 5001
   selector:
-    run: kubed
+    app: kubed
   type: NodePort
