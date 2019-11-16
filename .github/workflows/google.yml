@@ -63,4 +63,4 @@ jobs:
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
       run: |
-        gcloud run deploy kubed --project $GKE_PROJECT --image gcr.io/$GKE_PROJECT/$IMAGE:$GITHUB_SHA --platform managed --region $GKE_ZONE --account $GKE_EMAIL --quiet
+        gcloud run deploy kubed --project $GKE_PROJECT --image gcr.io/$GKE_PROJECT/$IMAGE:$GITHUB_SHA --platform managed --region $GKE_ZONE --impersonate-service-account $GKE_EMAIL --quiet
