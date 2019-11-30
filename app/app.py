@@ -1,5 +1,6 @@
 import os
 from flask import Flask, render_template
+from flask_jsonpify import jsonify
 
 app = Flask(__name__)
 
@@ -10,7 +11,7 @@ def hello():
 
 @app.route('/status')
 def status():
-    return "{'status' : 'success'}"
+    return jsonify(status="success", message="successfully completed... NO ERRORS..")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 8080)), debug=True)
