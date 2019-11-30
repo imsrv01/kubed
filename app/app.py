@@ -9,7 +9,7 @@ def hello():
 
 
 @app.route('/status')
-def hello():
+def status():
     return "{'status' : 'success'}"
 
 if __name__ == '__main__':
